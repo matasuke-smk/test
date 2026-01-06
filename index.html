@@ -59,22 +59,23 @@
 
     /* ========== HERO SECTION ========== */
     .hero {
-      min-height: 100dvh;
-      min-height: 100vh; /* dvh非対応ブラウザ用フォールバック */
+      height: 100dvh;
+      height: 100vh; /* dvh非対応ブラウザ用フォールバック */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 6rem 1.5rem;
+      padding: 2rem 1.5rem 5rem;
       position: relative;
       overflow: hidden;
       background-color: var(--color-bg);
+      box-sizing: border-box;
     }
 
-    @supports (min-height: 100dvh) {
+    @supports (height: 100dvh) {
       .hero {
-        min-height: 100dvh;
+        height: 100dvh;
       }
     }
 
@@ -126,15 +127,15 @@
       align-items: center;
       gap: 0.5rem;
       font-family: var(--font-accent);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--color-accent);
-      padding: 0.5rem 1.25rem;
+      padding: 0.4rem 1rem;
       border: 1px solid rgba(212, 165, 116, 0.3);
       border-radius: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       animation: fadeInDown 0.8s ease-out;
     }
 
@@ -171,26 +172,25 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--color-text-muted);
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       animation: fadeInUp 0.8s ease-out 0.4s both;
       white-space: nowrap;
     }
 
     .hero-divider {
       width: 1px;
-      height: 60px;
+      height: 40px;
       background: linear-gradient(to bottom, transparent, var(--color-accent), transparent);
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       animation: fadeIn 0.8s ease-out 0.6s both;
     }
 
     .hero-message {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 300;
-      line-height: 2;
+      line-height: 1.9;
       color: var(--color-text-muted);
       max-width: 400px;
-      margin-bottom: 3rem;
       animation: fadeInUp 0.8s ease-out 0.8s both;
     }
 
@@ -981,10 +981,6 @@
       正規ディーラーで断られた修理も、<br>
       溶接の技術で解決します。
     </p>
-    <div class="hero-cta">
-      <a href="tel:000-0000-0000" class="btn btn-primary">電話で相談</a>
-      <a href="https://line.me/ti/p/xxxxx" class="btn btn-line">LINEで相談</a>
-    </div>
   </section>
 
   <!-- ========== PROBLEMS ========== -->
