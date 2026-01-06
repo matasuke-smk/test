@@ -59,8 +59,7 @@
 
     /* ========== HERO SECTION ========== */
     .hero {
-      height: 100dvh;
-      height: 100vh; /* dvh非対応ブラウザ用フォールバック */
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -71,12 +70,6 @@
       overflow: hidden;
       background-color: var(--color-bg);
       box-sizing: border-box;
-    }
-
-    @supports (height: 100dvh) {
-      .hero {
-        height: 100dvh;
-      }
     }
 
     .hero-bg {
@@ -294,17 +287,19 @@
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-size: clamp(1.5rem, 7vw, 3.5rem);
       font-weight: 400;
       letter-spacing: 0.05em;
       color: var(--color-text);
       margin-bottom: 1rem;
+      white-space: nowrap;
     }
 
     .section-subtitle {
-      font-size: 0.9rem;
+      font-size: clamp(0.7rem, 3vw, 0.9rem);
       font-weight: 300;
       color: var(--color-text-muted);
+      white-space: nowrap;
     }
 
     /* ========== PROBLEMS SECTION ========== */
